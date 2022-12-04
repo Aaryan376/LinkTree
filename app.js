@@ -1,5 +1,5 @@
 const shareButtons = document.querySelectorAll('.tile-share-button');
-
+const topShareBtn = document.querySelector('.share-button');
 
 async function copyText(e){
    e.preventDefault();
@@ -12,3 +12,5 @@ async function copyText(e){
    }
 }
 shareButtons.forEach(shareButton=>shareButton.addEventListener('click',copyText));
+
+topShareBtn.addEventListener('click',copyText);
